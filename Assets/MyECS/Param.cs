@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Param : MonoBehaviour
+[CreateAssetMenu(menuName = "Boid/Param")]
+public class Param : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public float initSpeed = 2f;
+	public float minSpeed = 2f;
+	public float maxSpeed = 5f;
+	public float neighborDistance = 1f;
+	public float neighborFov = 90f;
+	public float separationWeight = 5f;
+	public float wallDistance = 3f;
+	public float wallWeight = 1f;
+	public float alignmentWeight = 2f;
+	public float cohesionWeight = 3f;
 }

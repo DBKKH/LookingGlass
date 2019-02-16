@@ -38,7 +38,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727910891115422}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -128,7 +128,7 @@ MonoBehaviour:
   customVerticalAngle: 0
   useCustomViewCone: 0
   customViewCone: 40
-  advancedFoldout: 0
+  advancedFoldout: 1
 --- !u!114 &114329103378511520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,17 +166,17 @@ MonoBehaviour:
   tilingPresetIndex: 4
   config:
     configVersion: 1.0
-    serial: 00069
+    serial: 00000
     pitch:
-      value: 49.836956
+      value: 49.91
     slope:
-      value: 5.2347827
+      value: 5.8
     center:
-      value: 0.39999998
+      value: 0
     viewCone:
       value: 40
     invView:
-      value: 1
+      value: 0
     verticalAngle:
       value: 0
     DPI:
@@ -200,7 +200,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   advancedFoldout: 0
-  renderIn2D: 0
+  renderIn2D: 1
   forceConfigResolution: 1
 --- !u!20 &20997309363445380
 Camera:
@@ -209,7 +209,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835017195477188}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 4
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}

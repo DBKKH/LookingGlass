@@ -46,7 +46,7 @@ public class Boid : MonoBehaviour
 	private void UpdateWalls(){
 		if (!simulation) return;
 
-		var scale = simulation.Sccale * 0.5f;
+		var scale = simulation.Scale * 0.5f;
 		accel +=
 			CalcAccelAgainstWall(-scale.x - pos.x, Vector3.right) +
 			CalcAccelAgainstWall(-scale.y - pos.y, Vector3.up) +

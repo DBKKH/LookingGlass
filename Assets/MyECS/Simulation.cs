@@ -12,7 +12,9 @@ public class Simulation : MonoBehaviour
 
 	[SerializeField] Param param;
 
-	[SerializeField] public Vector3 Sccale = new Vector3(10, 10, 10);
+	[SerializeField] public Vector3 Scale = new Vector3(10, 10, 10);
+
+	[SerializeField] int random = 7;
 	
 	List<Boid> boids_ = new List<Boid>();
 	public ReadOnlyCollection<Boid> boids
@@ -25,7 +27,7 @@ public class Simulation : MonoBehaviour
 	/// </summary>
 	void AddBoid()
 	{
-		var go = Instantiate(boidPrefab, Random., Random.rotation);
+		var go = Instantiate(boidPrefab, random * Random.insideUnitCircle, Random.rotation);
 		go.transform.SetParent(transform);
 		var boid = go.GetComponent<Boid>();
 		boid.simulation = this;
@@ -62,6 +64,6 @@ public class Simulation : MonoBehaviour
 	{
 		if (!param) return;
 		Gizmos.color = gizmoColor;
-		Gizmos.DrawWireCube(this.transform.position, this.Sccale);
+		Gizmos.DrawWireCube(this.transform.position, this.Scale);
 	}
 }

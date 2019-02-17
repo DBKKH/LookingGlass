@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 
 public class Simulation : MonoBehaviour
 {
+	[SerializeField] Color gizmoColor = Color.blue;
+
 	[SerializeField] int boidCount = 100;
 
 	[SerializeField] GameObject boidPrefab;
@@ -23,7 +25,7 @@ public class Simulation : MonoBehaviour
 	/// </summary>
 	void AddBoid()
 	{
-		var go = Instantiate(boidPrefab, Random.insideUnitSphere, Random.rotation);
+		var go = Instantiate(boidPrefab, Random., Random.rotation);
 		go.transform.SetParent(transform);
 		var boid = go.GetComponent<Boid>();
 		boid.simulation = this;
@@ -59,7 +61,7 @@ public class Simulation : MonoBehaviour
 	void OnDrawGizmos()
 	{
 		if (!param) return;
-		Gizmos.color = Color.magenta;
+		Gizmos.color = gizmoColor;
 		Gizmos.DrawWireCube(this.transform.position, this.Sccale);
 	}
 }

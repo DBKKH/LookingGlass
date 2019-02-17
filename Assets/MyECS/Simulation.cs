@@ -10,7 +10,7 @@ public class Simulation : MonoBehaviour
 
 	[SerializeField] Param param;
 
-	[SerializeField] Vector3 Sccale = new Vector3(10, 10, 10);
+	[SerializeField] public Vector3 Sccale = new Vector3(10, 10, 10);
 	
 	List<Boid> boids_ = new List<Boid>();
 	public ReadOnlyCollection<Boid> boids
@@ -19,7 +19,7 @@ public class Simulation : MonoBehaviour
 	}
 
 	/// <summary>
-	/// 
+	/// Create boid.prefab
 	/// </summary>
 	void AddBoid()
 	{

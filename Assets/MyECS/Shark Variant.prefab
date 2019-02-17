@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbea3268289a6cd40a90c928a4e523b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itsTarget: 0
+  accel: {x: 0, y: 0, z: 0}
 --- !u!1001 &9065054722351342374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,15 +71,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36b9185e8239a874c80cc1e74520eb36, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36b9185e8239a874c80cc1e74520eb36, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36b9185e8239a874c80cc1e74520eb36, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b9185e8239a874c80cc1e74520eb36, type: 3}

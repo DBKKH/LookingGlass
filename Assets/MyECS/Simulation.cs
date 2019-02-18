@@ -14,7 +14,7 @@ public class Simulation : MonoBehaviour
 
 	[SerializeField] public Vector3 Scale = new Vector3(10, 10, 10);
 
-	[SerializeField] int random = 7;
+	[SerializeField] int random = 1;
 	
 	List<Boid> boids_ = new List<Boid>();
 	public ReadOnlyCollection<Boid> boids

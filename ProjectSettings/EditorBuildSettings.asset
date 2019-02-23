@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Unitychan.unity
     guid: f6c19fc0b43035f4fb3918312b47f83e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LKGwithBoids.unity
     guid: cbd2821fd068b19408a11d7075ae2c42
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LKGtop.unity
     guid: 603bafd51a3b9e74aa6d9f2b60746512
   m_configObjects: {}

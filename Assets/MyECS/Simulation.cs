@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
+/// <summary>
+/// Create instance of boid.
+/// other, check boid number in scene, remove or add boid.
+/// </summary>
 public class Simulation : MonoBehaviour
 {
 	[SerializeField] Color gizmoColor = Color.blue;
-
-	[SerializeField] int boidCount = 100;
-
+	[SerializeField] int boidCount = 10;
 	[SerializeField] GameObject boidPrefab;
-
 	[SerializeField] Param param;
-
 	[SerializeField] public Vector3 Scale = new Vector3(10, 10, 10);
-
 	[SerializeField] int random = 1;
 	
 	List<Boid> boids_ = new List<Boid>();
+
 	public ReadOnlyCollection<Boid> boids
 	{
 		get { return boids_.AsReadOnly(); }
@@ -27,16 +27,17 @@ public class Simulation : MonoBehaviour
 	/// </summary>
 	void AddBoid()
 	{
-		var go = Instantiate(boidPrefab, random * Random.insideUnitCircle, Random.rotation);
-		go.transform.SetParent(transform);
-		var boid = go.GetComponent<Boid>();
+		var clone = Instantiate(boidPrefab, random * Random.insideUnitCircle, Random.rotation);
+		clone.transform.SetParent(transform);
+		var boid = clone.GetComponent<Boid>();
 		boid.simulation = this;
 		boid.param = param;
 		boids_.Add(boid);
 	}
 
 	/// <summary>
-	/// 
+	/// Update boid list number and count.
+	/// Destroy gameobject.
 	/// </summary>
 	void RemoveBoid()
 	{
@@ -51,13 +52,11 @@ public class Simulation : MonoBehaviour
 	void Update()
 	{
 		while (boids_.Count < boidCount)
-		{
 			AddBoid();
-		}
+		
 		while (boids_.Count > boidCount)
-		{
 			RemoveBoid();
-		}
+		
 	}
 
 	void OnDrawGizmos()
